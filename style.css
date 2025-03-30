@@ -1,0 +1,344 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  /* Header */
+  
+/* Header styling */
+header {
+  position:fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;       
+  padding: 10px 20px;
+  width: 100%;
+  background-color:#000;
+  padding: 20px;
+  z-index: 1000;
+  will-change: top, opacity;
+  animation: slideDown 1.0s cubic-bezier(1, 1, 1, 1) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* Align navigation to the right within the container */
+
+.container nav {
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  font-size: 1.2rem;
+}
+
+/* Navigation list styling */
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation link styling with underline effect on hover */
+nav ul li a {
+  color: #5bc6f0;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #f54e96;
+  color:#f54e96
+}
+
+/* Button Styling*/
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 40px; 
+  padding: 12px 24px;
+  background-color: #f54e96;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #5bc6f0;
+}
+
+
+
+
+/* Hero Section Styling */
+
+.hero {
+  height: 100vh;
+  background-image: url('resources/miles-morales-3840x2160-13144.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display:flex;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding-top: 80px;
+}
+
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color:#6854e8
+}
+
+.hero p{
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#5bc6f0
+  
+}
+.hero-content {
+  animation: slideIn 1s ease-in-out 0.2s forwards;
+  opacity: 0;
+  transform: translateY(50px);
+  font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+  
+/* Sections */
+
+
+/* About Section Styling */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 20px;
+  background-color: #000;
+  flex-wrap: nowrap;
+}
+.text {
+  text-align: left;
+  padding-right: 80px;
+  max-width: 700px;
+  margin:0 auto;
+  color: #5bc6f0;
+  font-size: 1.4rem; 
+}
+.text h3{
+  color: #f54e96;
+  margin-top: 0;
+
+}
+.text p{
+  line-height: 1.8;
+}
+
+.img-content {
+  display: flex;
+  justify-content:right;
+  padding-right: 150px;
+}
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* Contact Section Styling */
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #000;
+  text-align: center;
+}
+
+.contact-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Card Container using Flexbox */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 100px;
+}
+
+/* Card Styling - Transparent Glass-like Card */
+
+.card {
+  background: rgba(255, 255, 255,0.2); 
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari and compatible browsers */
+  transition: transform 0.3s ease, background 0.3s ease;
+  width: 350px;      /* Increased width from default (e.g., 300px) */
+  min-height: 400px;
+}
+
+
+/* Contact Form Card Specific Styling */
+.contact-form-card form {
+  display: flex;
+  flex-direction: column;
+  color: #f54e96;
+}
+
+.contact-form-card h3{
+  color: #f54e96;
+  font-size: 1.9rem;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid #d2c2c2f7;
+  border-radius: 9px;
+  font-size: 1rem;
+  background: rgb(255, 255, 255,0.2);
+}
+
+.contact-form-card button {
+  padding: 10px;
+  background-color: #5bc6f0;
+  border: none;
+  color: #fff;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-form-card button:hover {
+  background-color: #f54e96;
+}
+
+/* Connect Card Specific Styling */
+.connect-card h3{
+  color: #f54e96;
+  font-size: 1.9rem;
+ 
+}
+.connect-card .social-handles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.connect-card .social-handles a {
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content:center;
+  text-decoration: none;
+  color: #5bc6f0;
+  font-size: 1.09rem;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.connect-card .social-handles a img {
+  width: 40px;
+  height: 50px;
+  object-fit: contain;
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content:center;
+
+}
+
+.connect-card .social-handles a:hover {
+  color: #f54e96;
+}
+
+/* Animation Classes */
+.animate-left {
+  animation: slideInLeft 1.2s forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1.2s forwards;
+}
+
+/* Keyframes for sliding in */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover effect (optional) */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+
+
+  

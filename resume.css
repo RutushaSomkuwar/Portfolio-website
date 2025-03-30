@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#5bc6f0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  
+  iframe {
+    border: 1px solid #ddd;
+    border-radius: 9px;
+  }
+  
